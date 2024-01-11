@@ -4,8 +4,9 @@
 #include <stdio.h>
 
 struct node {
-    struct node *next;
     int info;
+    struct node *next;
 };
+
 
 #endif
