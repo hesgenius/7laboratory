@@ -8,5 +8,9 @@ struct node {
     struct node *next;
 };
 
+struct queue {
+    struct node *head;
+    struct node *tail;
+};
 
 #endif
