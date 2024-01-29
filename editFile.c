@@ -1,6 +1,6 @@
 #include "editFile.h"
 
-int input_file(char filename[], struct node **end) {
+int input_file(char filename[], struct node *end) {
     int size = 0;
     FILE *file;
     char str[lmax];
@@ -10,7 +10,7 @@ int input_file(char filename[], struct node **end) {
         char str[lmax];
         while (fgets(str, lmax, file) != NULL) {
             int num = atoi(str);
-            *end = push(*end, num);
+            end = push(end, num);
             size++;
         }
         fclose(file);

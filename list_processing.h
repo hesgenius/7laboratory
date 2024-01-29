@@ -10,4 +10,8 @@ void queue_out(struct node *head);
 
 void free_memory(struct node *lst);
 
+int maximum(struct node *head);
+
+void delete(struct node *head, int m);
+
 #endif

@@ -13,7 +13,7 @@ struct node *push(struct node *end, int data) {
 
 void queue_out(struct node *head) {
     if (head->next == NULL) {
-        puts("EMPTY");
+        printf("EMPTY\n");
     }
     else {
         head = head->next;
@@ -33,4 +33,39 @@ void free_memory(struct node *lst) {
         now = next;
     }
     puts("MEMORY CLEAN");
+}
+
+int maximum(struct node *head) {
+    int m = 0;
+    if (head->next == NULL) {
+        printf("EMPTY\n");
+    }
+    else {
+        head = head->next;
+        m = head->info;
+        while (head) {
+            if (head->info > m) {
+                m = head->info;
+            }
+            head = head->next;
+        }
+    }
+    return m;
+}
+
+void delete(struct node *head, int m) {
+    struct node *buff = malloc(sizeof(struct node));
+    if (head->next == NULL) {
+        printf("EMPTY\n");
+    }
+    else {
+        while (head && head->next != NULL) {
+            if ((head->next)->info == m) {
+                buff->next = (head->next)->next;
+                free(head->next);
+                head->next = buff->next;
+            }
+            head = head->next;
+        }
+    }
 }
