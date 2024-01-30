@@ -6,10 +6,15 @@
 #include <string.h>
 #include <ctype.h>
 #include "list.h"
-#include "list_processing.h"
+#include "queue_processing.h"
+#include "stack_processing.h"
 
-int input_file(char filename[], struct node *end);
+int Qinput_file(char filename[], struct node *end);
 
-void output_file(char filename[]);
+void Qoutput_file(char filename[], struct node *head);
+
+int Sinput_file(char filename[], struct node **top, int a, int b);
+
+void Soutput_file(char filename[], struct node *top);
 
 #endif

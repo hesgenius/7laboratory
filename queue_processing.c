@@ -1,6 +1,6 @@
-#include "list_processing.h"
+#include "queue_processing.h"
 
-struct node *push(struct node *end, int data) {
+struct node *qpush(struct node *end, int data) {
     struct node *buff = malloc(sizeof(struct node));
     if (buff) {
         buff->info = data;
@@ -68,4 +68,5 @@ void delete(struct node *head, int m) {
             head = head->next;
         }
     }
+    free(buff);
 }

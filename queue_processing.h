@@ -1,10 +1,9 @@
-#ifndef list_processing
-#define list_processing
+#ifndef QUEUE_PROCESSING
+#define QUEUE_PROCESSING
 
-#include <malloc.h>
 #include "list.h"
 
-struct node *push(struct node *end, int data);
+struct node *qpush(struct node *end, int data);
 
 void queue_out(struct node *head);
 
